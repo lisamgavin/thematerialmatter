@@ -8,6 +8,9 @@
 </head>
 <body>
 
+| <%= link_to "Product Catalogue", products_path %> |
+<%= link_to "Your Cart", :controller => "carts",:action => "your_cart" %> |
+
 <%= yield %>
 
 </body>
