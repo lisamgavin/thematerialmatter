@@ -6,9 +6,10 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
+<body style=background:#FFFFFF>
 
-| <%= link_to "Product Catalogue", products_path %> |
+<%= link_to "Home", :controller=> "home", :action => "home" %> |
+<%= link_to "Product Catalogue", products_path %> |
 <%= link_to "Your Cart", :controller => "carts",:action => "your_cart" %> |
 
 <%= yield %>

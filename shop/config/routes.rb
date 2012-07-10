@@ -1,12 +1,18 @@
 Shop::Application.routes.draw do
+  resources :orders
+
   resources :line_items
 
   resources :carts
 
   resources :products
 
-
+  get "home/home"
+  get "home/thanks" 	
+	
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
+
+  match '/checkout' => "products#index", :as => "checkout"
 
 
   # The priority is based upon order of creation:
