@@ -1,4 +1,6 @@
 Shop::Application.routes.draw do
+  get "page/home"
+
   resources :orders
 
   resources :line_items
@@ -6,13 +8,17 @@ Shop::Application.routes.draw do
   resources :carts
 
   resources :products
+  
+  resources :home
 
   get "home/home"
   get "home/thanks" 	
 	
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
+  
+  match '/shop' => "products#index", :as => "shop"
+  
 
-  match '/checkout' => "products#index", :as => "checkout"
 
 
   # The priority is based upon order of creation:
@@ -64,7 +70,7 @@ Shop::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "home#home"
 
   # See how all your routes lay out with "rake routes"
 
