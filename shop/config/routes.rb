@@ -10,6 +10,8 @@ Shop::Application.routes.draw do
   resources :products
   
   resources :home
+  
+  post "orders/thankyou"
 
   get "home/home"
   get "home/thanks" 	

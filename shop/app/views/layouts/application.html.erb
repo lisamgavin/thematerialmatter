@@ -7,6 +7,7 @@
   <%= csrf_meta_tag %>
 </head>
 <body style=background:#FFFFFF>
+
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -23,7 +24,6 @@
     <ul class="nav nav-pills"> 
       <li><%= link_to "Home", :controller=> "home", :action => "home" %></li>
      <li><%= link_to "Shop", products_path %></li>
-      <li><%= link_to "Your Cart", :controller => "carts",:action => "your_cart" %> </li>
     </ul>
   </div>
 </header>
@@ -37,7 +37,7 @@
 		
 <%= link_to "Home", :controller=> "home", :action => "home" %> |
 <%= link_to "Product Catalogue", products_path %> |
-<%= link_to "Your Cart", :controller => "carts",:action => "your_cart" %> |
+
 
 <%= yield %>
 
