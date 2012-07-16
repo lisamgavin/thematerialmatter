@@ -7,6 +7,14 @@ gem 'rails', '3.0.10'
 
 gem 'sqlite3'
 
+gem 'jquery-rails', '>= 1.0.12'
+
+gem "json" # Only needed if on Ruby 1.8 / a platform that ships without JSON
+gem "barista"
+
+gem 'therubyracer', :require => false
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -40,8 +40,8 @@ if(typeof Effect == 'undefined')
   throw("controls.js requires including script.aculo.us' effects.js library");
   
   $ ->
-  	$('store.entry>img').click ->
-  		$(this).parent().find('submit').click()
+  	$('productbuttons.picture>img').click ->
+  		$(this).parent().find(':add_to_cart').click()
   
 
 var Autocompleter = { };
