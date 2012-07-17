@@ -10,4 +10,8 @@ class UsersController < ApplicationController
         render :action => 'new'
     end
   end
+
+  def index
+    @users = User.find(:all)
+  end
   end
