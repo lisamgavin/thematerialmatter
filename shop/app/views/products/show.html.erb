@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <b>Price:</b>
-  <%= @product.price %>
+  <b>Price: </b><%= number_to_currency( @product.price, :unit => '&euro;') %>/m<sup>2</sup>
+ 
 </p>
 
 

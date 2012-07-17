@@ -6,24 +6,26 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Image url</th>
-    <th>Price</th>
+    <th></th>
+    <th>Price/m<sup>2</sup></td></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @products.each do |product| %>
-  <tr>
+  <tr class="productbuttons">
     <td><%= product.title %></td>
     <td><%= product.description %></td>
-    <td><%= product.image_url %></td>
+    <td class="picture"><%= link_to image_tag(product.image_url), line_items_path(:product_id => product), :method => :post %></td>
+
     
-    <td class="price"><%= number_to_currency(product.price, :unit => '€') %></td>
+    <td class="price"><%= number_to_currency(product.price, :unit => '€') %>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
-  	<td><%= button_to 'Add to Cart', line_items_path(:product_id=> product) %></td>
+  	<td class="cartbutton"><%= button_to 'Add to Cart', line_items_path(:product_id=> product) %></td>
+ 
   </tr>
 <% end %>
 </table>

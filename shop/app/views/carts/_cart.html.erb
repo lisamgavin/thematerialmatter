@@ -1,0 +1,16 @@
+
+<h2>Your Cart</h2>
+<table>
+	<%= render (cart.line_items)%>
+	</br>
+	<tr>
+		<td>Total Price</td> 
+		<td><%= number_to_currency(cart.total_price, :unit => '&euro;') %></td>
+	</tr>
+	</table>
+	<%= button_to "Checkout",new_order_path, :method => :get if @order.nil? %><%#from Prag Prog wiki http://pragprog.com/wikis/wiki/Pt-G-2%>
+
+	<br/>
+	<%= button_to 'Empty cart', @cart, :method => :delete, :confirm => 'Are you sure?' %>
+	<br/>
+

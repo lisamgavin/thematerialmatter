@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: John Smith
+  address: MyText
+  email: john@boi.ie
+  pay_type: Visa
+
+two:
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString
